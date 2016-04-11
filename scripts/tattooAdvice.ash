@@ -212,7 +212,7 @@ void possessedTats( )
 
 void addSuggestion(string tattoo, string suggestion, int sort)
 {
-	if (outfitTattoos[tattoo].sort < sort)
+	if (outfitTattoos[tattoo].sort <= sort)
 		return;
 
 		outfitTattoos[tattoo].suggestion = bullet + suggestion;
@@ -1222,7 +1222,8 @@ void main( )
 	fur[$item[space beast fur hat]] = 1;
 	fur[$item[space beast fur whip]] = 1;
 	fur[$item[space beast fur pants]] = 1;
-	makeable("Space Beast Furs", fur, $item[space beast fur], "making parts from " + item_wrap('space beast fur') + ".");
+//	makeable("Space Beast Furs", fur, $item[space beast fur], "making parts from " + item_wrap('space beast fur'));
+	makeable("Space Beast Furs", fur, $item[space beast fur]);
 
 	int [item] emp;
 	emp[$item[The Emperor's new hat]] = 1;
@@ -1269,9 +1270,9 @@ void main( )
 	makeable("Spelunker's Gear", spel, $item[Spelunker's Guild prize sack]);
 
 	int [item] brogre;
-	brogre[$item[double-ice cap]] = 200;
-	brogre[$item[double-ice box]] = 200;
-	brogre[$item[double-ice britches]] = 200;
+	brogre[$item[Brogre bucket hat]] = 200;
+	brogre[$item[Brogre brolo shirt]] = 200;
+	brogre[$item[Brogre brorts]] = 200;
 	makeable('Brogre Brouture', brogre, $item[Beach Buck], mall_price($item[one-day ticket to spring break beach])/30, "earning them at " + item_wrap("Spring Break Beach"));
 
 	int [item] mache;
